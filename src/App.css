@@ -52,23 +52,18 @@
 
 .pokemon-grid {
   display: grid;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-top: 50px;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(clamp(120px, 30vw, 200px), 1fr));
+  gap: clamp(8px, 2vw, 20px);
+  padding: clamp(8px, 3vw, 24px);
 }
 
-@media (min-width: 640px) {
-  .pokemon-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
+.pokemon-card {
+  width: 100%;
 }
 
-@media (min-width: 1024px) {
-  .pokemon-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
+.pokemon-card img {
+  width: 100%;
+  height: auto;
 }
 
 .card {
