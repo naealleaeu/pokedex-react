@@ -50,74 +50,88 @@
     background-color: var(--poke-red);
   }
 
-  .pokemon-grid {
+.pokemon-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  margin: 50px;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 50px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
 }
 
-  .card {
-    width: 220px;
-    border-radius: 28px;
-    padding: 10px;
-    background: var(--pika-yellow);
-    border: 4px solid var(--ink);
+@media (min-width: 640px) {
+  .pokemon-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
- 
-  .card-inner {
-    background: #fff;
-    border-radius: 20px;
-    padding: 14px;
-  }
- 
-  .card-art-frame {
-    border-radius: 16px;
-    background: var(--poke-blue);
-    padding: 4px;
-  }
- 
-  .card-art {
-    background: #fff;
-    border-radius: 13px;
-    aspect-ratio: 1 / 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-  }
- 
-  .card-art img {
-    width: 82%;
-    height: 82%;
-    object-fit: contain;
-  }
- 
-  .card-footer {
-    margin-top: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    padding: 0 2px;
-  }
- 
-  .card-name {
-    font-size: 17px;
-    font-weight: 800;
-    color: var(--ink);
-    margin: 0;
-  }
- 
-  .card-id {
-    font-size: 12px;
-    font-weight: 700;
-    color: var(--poke-red);
-  }
+}
 
-  .findyourpokemon {
-      max-width: 100%;
-      width: 300px; 
-      height: auto;
-      display: block;
-      margin: 0 auto;
+@media (min-width: 1024px) {
+  .pokemon-grid {
+    grid-template-columns: repeat(4, 1fr);
   }
+}
+
+.card {
+  width: 220px;
+  border-radius: 28px;
+  padding: 10px;
+  background: var(--pika-yellow);
+  border: 4px solid var(--ink);
+}
+
+.card-inner {
+  background: #fff;
+  border-radius: 20px;
+  padding: 14px;
+}
+
+.card-art-frame {
+  border-radius: 16px;
+  background: var(--poke-blue);
+  padding: 4px;
+}
+
+.card-art {
+  background: #fff;
+  border-radius: 13px;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.card-art img {
+  width: 82%;
+  height: 82%;
+  object-fit: contain;
+}
+
+.card-footer {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0 2px;
+}
+
+.card-name {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--ink);
+  margin: 0;
+}
+
+.card-id {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--poke-red);
+}
+
+.findyourpokemon {
+    max-width: 100%;
+    width: 300px; 
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
