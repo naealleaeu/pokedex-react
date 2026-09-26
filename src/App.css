@@ -115,10 +115,9 @@
   }
 
   .findyourpokemon {
-    display: block;
-    margin: 0 auto;
-    width: 30%;
-    height: auto;
-    margin-top: 20px;
-    
+      max-width: 100%;
+      width: 300px; 
+      height: auto;
+      display: block;
+      margin: 0 auto;
   }

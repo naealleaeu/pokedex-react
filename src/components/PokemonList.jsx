@@ -33,7 +33,10 @@ function PokemonList({ searchTerm }) {
         return { id, name: poke.name };
       });
 
-      setPokemonList((prev) => [...prev, ...formatted]);
+      setPokemonList((prev) => {
+        const combined = [...prev, ...formatted];
+        return combined.sort((a, b) => Number(a.id) - Number(b.id));
+      });
       setHasMore(data.next !== null);
     } catch (err) {
       setError(err.message);
@@ -107,7 +110,9 @@ function PokemonList({ searchTerm }) {
 
       {loading && <p>Loading...</p>}
 
-      {!searchTerm && hasMore && <div ref={sentinelRef} style={{ height: '1px' }} />}
+      {!searchTerm && hasMore && pokemonList.length > 0 && (
+        <div ref={sentinelRef} style={{ height: '1px' }} />
+      )}
     </div>
   );
 }
